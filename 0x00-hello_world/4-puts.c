@@ -3,6 +3,7 @@
 /**
  *  main - Entry point for program
  *
+ * return 0 - success
  */
 
 int main(void)
