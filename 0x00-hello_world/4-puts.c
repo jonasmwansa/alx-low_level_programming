@@ -2,13 +2,9 @@
 
 /**
  *
- *  * main - Entry point
+ *  main - Entry point for program
  *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
+ */
 
 int main(void)
 
