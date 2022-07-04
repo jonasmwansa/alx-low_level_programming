@@ -9,11 +9,8 @@
 */
 int main(void)
 {
-	char low;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 
-	for (low = 'a'; low <= 'z'; low++)
-		putchar(low);
-		printf("\n");
-
+	printf("%s\n", alphabet);
 	return (0);
 }
