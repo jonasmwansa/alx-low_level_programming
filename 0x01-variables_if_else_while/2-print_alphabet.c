@@ -11,7 +11,7 @@
 int main(void)
 {
 	char alphabet[]="abcdefghijklmnopqrstuvwxyz";
-	printf(alphabet);
+	printf("%s\n", alphabet);
 	
 	return (0);
 }
