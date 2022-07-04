@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctype.h>
 
 /**
 * main - Entry point for program
@@ -12,8 +13,8 @@ int main(void)
 {
 	
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-	char upperAlpha = toupper(alphabet);
+	char upperAlpha[] = toupper(alphabet);
 	
-	printf("%s%s\n", alphabet), upperAlpha):
+	printf("%s%s\n", alphabet, upperAlpha);
 	return (0);
 }
