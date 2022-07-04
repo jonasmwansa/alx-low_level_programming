@@ -10,8 +10,8 @@
 
 int main(void)
 {
-	char alphabet[]="abcdefghijklmnopqrstuvwxyz";
-	printf("%s\n", alphabet);
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 	
+	printf("%s\n", alphabet);
 	return (0);
 }
