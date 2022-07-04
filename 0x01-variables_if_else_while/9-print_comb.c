@@ -9,17 +9,15 @@
 */
 int main(void)
 {
-	char num;
+	int n;
 
-	for (num = '0'; num < '10'; num++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		putchar(num);
+		putchar(n);
 		if(num != '9')
 		{
-		
 			putchar(", ");
 		}
-		
 	}
 	printf("\n");
 
