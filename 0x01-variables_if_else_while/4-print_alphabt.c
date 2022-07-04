@@ -13,13 +13,13 @@ int main(void)
 
 	for(low = 'a'; low<= 'z'; low++)
 	{
-	 	if(low =='q' || low=='e')
+	 	if(low == 'q' || low== 'e')
 		{
 	 		continue;
 	 	}
 		putchar(low);
 	}
-	putchar("\n");
+	printf("\n");
 
 	return (0);
 }
