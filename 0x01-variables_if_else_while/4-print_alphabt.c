@@ -11,9 +11,9 @@ int main(void)
 {
 	char low;
 
-	for(low = 'a'; low <= 'z'; low++)
+	for (low = 'a'; low <= 'z'; low++)
 	{
-	if(low == 'q' || low == 'e')
+	if (low == 'q' || low == 'e')
 	{
 		continue;
 	}
