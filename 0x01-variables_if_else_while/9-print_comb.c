@@ -9,17 +9,16 @@
 */
 int main(void)
 {
-	char num;
+	int n;
 
-	for (num = '0'; num < '10'; num++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		putchar(num);
-		if(num != '9')
+		putchar(n);
+		if (n != '9')
 		{
-		
-			putchar(", ");
+			putchar(',');
+			putchar(' ');
 		}
-		
 	}
 	printf("\n");
 
