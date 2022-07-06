@@ -1,18 +1,11 @@
 #include "main.h"
+#include <stdlib.h>
 /**
-* print_alphabet - prints all aphabets in lowercase
-*
-* Description: They are sorted by default
-* return (0)
+* _abs - prints te absolute value
+* @n: input parameter
+* Return: Always 0.
 */
-void print_alphabet(void)
+int _abs(int n)
 {
-	char i;
-
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		_putchar(i);
-	}
-	_putchar('\n');
-
+	return (abs(n));
 }
