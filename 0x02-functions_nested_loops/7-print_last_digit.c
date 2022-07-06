@@ -1,18 +1,16 @@
 #include "main.h"
 /**
-* print_alphabet - prints all aphabets in lowercase
+* print_last_digit - prints the lest digit
+* @n: first parameter
 *
-* Description: They are sorted by default
-* return (0)
+* Description: prints the last digit
+* Return: Always (0).
 */
-void print_alphabet(void)
+
+int print_last_digit(int n)
 {
-	char i;
+	int last_digit;
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		_putchar(i);
-	}
-	_putchar('\n');
-
+	last_digit = n % 10;
+	return (last_digit);
 }
