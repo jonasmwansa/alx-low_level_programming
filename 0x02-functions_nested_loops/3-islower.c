@@ -1,18 +1,14 @@
 #include "main.h"
 
 /**
-* main - Entry point for program
-* Return: Always 0 (Success)
+* _islower - prints 1 or c depending on input
+* @c: first parameter
 *
+* Description: prints all lowercase letters
+* Return: Always(0).
 */
 
-int main(void)
+int _islower(int c)
 {
-	int r;
-
-	r = _islower('c');
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
-
+	return (c >= 'a' && c <= 'z');
 }
