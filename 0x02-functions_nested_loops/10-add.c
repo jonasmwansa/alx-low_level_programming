@@ -1,18 +1,12 @@
 #include "main.h"
 /**
-* print_alphabet - prints all aphabets in lowercase
-*
-* Description: They are sorted by default
-* return (0)
-*/
-void print_alphabet(void)
+ * add - Adds two integers.
+ * @a: The first integer to be added.
+ * @b: The second integer to be added.
+ *
+ * Return: The result of the addition.
+ */
+int add(int a, int b)
 {
-	char i;
-
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		_putchar(i);
-	}
-	_putchar('\n');
-
+	return (a + b);
 }
