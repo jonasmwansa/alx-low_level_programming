@@ -1,86 +1,37 @@
 #include "main.h"
-
 /**
- * print_to_98 - Prints all natural numbers from input to 98,
- *               in order separated by a comma followed by a space.
- * @n: The number to begin counting at.
+ * print_to_98 - function that prints all natural numbers from n to 98,
+ * followed by a new line.
+ * @n: int 1
+ * Return: int
  */
 void print_to_98(int n)
 {
-	int end = 98;
-
-	if (n < end)
+	if (n < 98)
 	{
-		for (; n <= end; n++)
+		while (n <= 98)
 		{
-			if (n == 98)
+			_putchar(n);
+			if (n != 98)
 			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				break;
+				_putchar(", ");
 			}
-			else
-			{
-				if (n >= -9 && n <= 9)
-				{
-					if (n < 0)
-					{
-						_putchar('-');
-						_putchar((n * -1) + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
-					else if (n >= 0)
-					{
-						_putchar(n + '0');
-						_putchar(',');
-						_putchar(' ');
-					}
-				}
-				else if (n >= 100)
-				{
-					_putchar((n / 100) + '0');
-					_putchar((n / 10) + '0');
-					_putchar((n % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar((n / 10) + '0');
-					_putchar((n % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
+			n++;
 		}
-		_putchar('\n');
-	}
-	else if (n == 0)
+	} else if (n > 98)
 	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
-		_putchar('\n');
-	}
-	else
-	{
-		for (; n >= end; n--)
+		while (n >= 98)
 		{
-			if (n == 98)
+			_putchar(n);
+			if (n != 98)
 			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				break;
+				_putchar(", ");
 			}
-			else
-			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
+			n--;
 		}
-		_putchar('\n');
+	} else
+	{
+		_putchar(n);
 	}
-	return;
+	_putchar('\n');
 }
