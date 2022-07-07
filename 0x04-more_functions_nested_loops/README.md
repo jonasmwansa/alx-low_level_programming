@@ -1,6 +1,4 @@
-#!/bin/bash
-
-this directory constitutes of the following content below
+## this directory constitutes of the following content below
 
 - sted while loops
 
