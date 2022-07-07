@@ -19,21 +19,21 @@ if (n < 98)
 		}
 		n++;
 	}
-	}
+}
 else if (n > 98)
 {
 	while (n >= 98)
 	{
 		if (n != 98)
 		{
-			_putchar(n);	
+			_putchar(n);
 			_putchar(',');
 			_putchar(' ');
 		}
-	n--;
+		n--;
 	}
 }
-else
+else if (n==98)
 {
 	_putchar(98);
 }
