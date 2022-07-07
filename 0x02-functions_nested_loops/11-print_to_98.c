@@ -35,7 +35,7 @@ else if (n > 98)
 }
 else
 {
-	_putchar('98');
+	_putchar(98);
 }
 	_putchar('\n');
 }
