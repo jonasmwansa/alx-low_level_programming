@@ -2,13 +2,19 @@
 #include "main.h"
 
 /**
-* _isupper - prints 1 or 0 depending on input
-* @c: input type variable
+* print_numbers - print numbers
 *
-* Description: checks for uppercase letters
-* Return: Aways (0) success
+* Description: prints the numbers, from 0 to 9, followed by a new line
+* Return: Always (0)
 */
-int _isupper(int c)
+
+void print_numbers(void)
 {
-	return (c >= 'A' && c <= 'Z');
+	char i;
+
+	for (i = 0; i <= 9; i++)
+	{
+		_putchar(i + '0');
+	}
+	_putchar('\n');
 }
