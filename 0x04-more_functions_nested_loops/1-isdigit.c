@@ -3,10 +3,10 @@
 
 /**
 * _isdigit - 1 if c is a digit
-* @parameterc: input value
+* @c: input value
 *
 * Description: checks for a digit (0 through 9).
-* Return: Always (0).
+* Return: Always (0) success.
 */
 int _isdigit(int c)
 {
