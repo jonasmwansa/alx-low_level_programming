@@ -2,19 +2,20 @@
 #include <stdio.h>
 
 /**
- * reset_to_98 - takes a pointer to an int as parameter
- * and updates the value it points to 98
- * @n: pointer to int n
- * Return: Always 0.
- */
+* _strlen - returns the length of a string
+* @s: string to be checked
+* Return: length
+*/
 
 int _strlen(char *s)
 {
-char *str;
+	int len = 0;
 
-	int len;
-        
-	str = "My first strlen!";
-	len = _strlen(str);
-	return len;
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
 }
