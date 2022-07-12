@@ -2,13 +2,24 @@
 #include <stdio.h>
 
 /**
- * reset_to_98 - takes a pointer to an int as parameter
- * and updates the value it points to 98
- * @n: pointer to int n
- * Return: Always 0.
+ * puts2 - takes a point to characters and prints characters
+ * @str: point to input string
+ *
+ * Description: prints character of a string, starting first character
+ * Return: Always (0)
  */
 
-void reset_to_98(int *n)
+void puts2(char *str)
 {
-	*n = 98;
+	int i;
+
+	while (str[i] != '\0')
+	{
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
+		i++;
+	}
+	_putchar('\n');
 }
