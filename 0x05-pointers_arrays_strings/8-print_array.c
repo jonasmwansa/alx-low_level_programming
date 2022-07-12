@@ -1,14 +1,21 @@
+#include "main.h"
 /**
- * swap_int - takes two integer values and swap them
- * @a: pointer to first value
- * @b: pointer to second value
+ * print_array - print an array.
+ * @a: the array to print.
+ * @n: array's length
  */
 
-void swap_int(int *a, int *b)
+void print_array(int *a, int n)
 {
-	int c;
+	int i;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
+		if (i < n - 1)
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
 }
