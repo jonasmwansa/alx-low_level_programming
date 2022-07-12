@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * puts2 - takes a point to characters and prints characters
- * @str: point to input string
- *
- * Description: prints character of a string, starting first character
- * Return: Always (0)
- */
+* puts2 - prints characters
+* @str: point to input string
+*
+* Description: prints character of a string, starting first character
+* Return: Always (0)
+*/
 
 void puts2(char *str)
 {
