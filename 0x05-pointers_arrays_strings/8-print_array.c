@@ -10,13 +10,14 @@
 void print_array(int *a, int n)
 {
 	int i;
+	char c = ', ';
 
 	for (i = 0; i < n; i++)
 	{
 		putchar(a[i]);
 		if (i < n - 1)
 		{
-			putchar(', ');
+			putchar(c);
 		}
 	}
 	putchar('\n');
