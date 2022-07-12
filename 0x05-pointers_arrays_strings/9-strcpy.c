@@ -2,13 +2,22 @@
 #include <stdio.h>
 
 /**
- * reset_to_98 - takes a pointer to an int as parameter
- * and updates the value it points to 98
- * @n: pointer to int n
- * Return: Always 0.
- */
+* _strcpy - copies string pointed to by src to buffer pointed to by dest
+* @src: source to copy
+* @dest: destination of copy
+*
+* Return: pointer to dest
+*/
 
-void reset_to_98(int *n)
+char *_strcpy(char *dest, char *src)
 {
-	*n = 98;
+	int i = 0;
+
+	while (*(src + i))
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = '\0';
+	return (dest);
 }
