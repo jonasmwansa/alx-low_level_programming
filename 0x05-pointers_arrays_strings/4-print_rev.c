@@ -8,25 +8,12 @@
 * Return: Always 0.
 */
 
-void print_rev(char *s)
+void _puts(char *str)
 {
-	int len = 0;
-	int i;
-
-	while (*s != '\0')
+	while (*str != '\0')
 	{
-		len++;
-		++s;
+		_putchar(*str);
+		str++;
 	}
-
-	s--;
-
-	for (i = len; i > 0; i--)
-	{
-		_putchar(*s);
-		s--;
-	}
-
 	_putchar('\n');
-
 }
