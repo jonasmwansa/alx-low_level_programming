@@ -2,33 +2,28 @@
 #include <stdio.h>
 
 /**
-* _puts - takes a point a string
-* @str: pointer to the string to print
+* rev_string - reverse a string
+* @s: input string
 *
+* Description: reverses a string.
+* Return: Always (0)
 */
+
 void rev_string(char *s)
 {
-	int len = 0, i, j;
-	char *str, temp;
+	int left, i, temp;
 
-	while(len>=0)
+	left = 0;
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if(s[len]=='\0')
-		{
-			break;
-		}
-		len++;
+		i++;
 	}
-
-	str = s;
-
-	for(i = 0;i < (len - 1); i++)
+	i--;
+	while (i > left)
 	{
-		for(j = i; j > 0; j--)
-		{
-			temp = *(str + j);
-			*(str + j) =  *(str + (j - 1));
-			*(str + (j - 1) = temp; 
-		}
+		temp = s[i];
+		s[i--] = s[left];
+		s[left++] = temp;
 	}
 }
