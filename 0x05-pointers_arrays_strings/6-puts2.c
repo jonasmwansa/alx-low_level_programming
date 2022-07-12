@@ -2,24 +2,19 @@
 #include <stdio.h>
 
 /**
-* puts2 - prints characters
-* @str: point to input string
-*
-* Description: prints character of a string, starting first character
-* Return: Always (0)
-*/
-
+ * puts2 - prints every other character of a  string to stdout
+ * @str: string to print
+ *
+ * Return: void
+ */
 void puts2(char *str)
 {
-	int i;
+	int i = 0;
 
-	while (str[i] != '\0')
+	while (*(str + i))
 	{
-		if (i % 2 == 0)
-		{
-			putchar(str[i]);
-		}
-		i++;
+		putchar(*(str + i));
+		i = i + 2;
 	}
 	putchar('\n');
 }
