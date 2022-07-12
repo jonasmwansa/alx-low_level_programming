@@ -16,7 +16,7 @@ void print_array(int *a, int n)
 		putchar(a[i]);
 		if (i < n - 1)
 		{
-			putchar(", ");
+			putchar(', ');
 		}
 	}
 	putchar('\n');
