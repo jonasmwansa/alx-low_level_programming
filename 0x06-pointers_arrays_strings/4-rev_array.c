@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
-* _strcat - concatenates two strings
-* @dest: first input string
-* @src: second input string
-*
-* Description: appends the src string to the dest string
-* Return: dest
-*/
+ * reverse_array - reverse an array
+ * @a: first input
+ * @n: number of elemets
+ *
+ * Description: reverses the content of an array of integers
+ * Return: always (0)
+ */
 
-char *_strcat(char *dest, char *src)
+void reverse_array(int *a, int n)
 {
-	int i, len;
+	int lt, rt,  tmp;
 
-	len = 0;
-	while (dest[len] != '\0')
+	lt = 0;
+	rt = n - 1;
+
+	while (lt < rt)
 	{
-		++len;
+		tmp = a[lt];
+		a[lt] = a[rt];
+		a[rt] = tmp;
+		lt++;
+		rt--;
 	}
-	for (i = 0; src[i] != '\0'; ++i, ++len)
-	{
-		dest[len] = src[i];
-	}
-	dest[len] = '\0';
-	return (dest);
 }
