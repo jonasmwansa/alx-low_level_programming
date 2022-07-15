@@ -1,27 +1,21 @@
 #include "main.h"
-
 /**
-* _strcat - concatenates two strings
-* @dest: first input string
-* @src: second input string
-*
-* Description: appends the src string to the dest string
-* Return: dest
-*/
+ * string_toupper - uppercase strings
+ * @s: input string
+ * Description:  changes all lowercase letters of a string to uppercase
+ * Return: always (0)
+ */
 
-char *_strcat(char *dest, char *src)
+char *string_toupper(char *s)
 {
-	int i, len;
+	int i;
 
-	len = 0;
-	while (dest[len] != '\0')
+	for (i = 0; s[i] != '\0'; ++i)
 	{
-		++len;
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = s[i] - 32;
+		}
 	}
-	for (i = 0; src[i] != '\0'; ++i, ++len)
-	{
-		dest[len] = src[i];
-	}
-	dest[len] = '\0';
-	return (dest);
+	return (s);
 }
