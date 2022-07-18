@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
- * _memset - fills string with constant char b upto n bytes
- * @s: input pointer to string
- * @b: constant char
+ * _memcpy - fills string with constant char b upto n bytes
+ * @src: source input pointer to string
+ * @dest: destination char
  * @n: number of bytes
- * Return: pointer to s string
+ * Return: pointer to dest string
  */
 
 char *_memset(char *dest, char *src, unsigned int n)
