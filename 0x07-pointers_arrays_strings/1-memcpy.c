@@ -9,14 +9,14 @@
  * Return: pointer to s string
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_memset(char *dest, char *src, unsigned int n)
 {
 	unsigned int j = 0;
 
 	while (j < n)
 	{
-		s[j] = b;
+		dest[j] = src;
 		j++;
 	}
-	return (s);
+	return (dest);
 }
