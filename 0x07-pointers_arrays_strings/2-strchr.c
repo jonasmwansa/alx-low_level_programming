@@ -2,21 +2,18 @@
 #include "main.h"
 
 /**
- * _memset - fills string with constant char b upto n bytes
- * @s: input pointer to string
- * @b: constant char
- * @n: number of bytes
- * Return: pointer to s string
+ * _strchr - locates a character in a string
+ * @s: string input
+ * @c: character to find
+ * Return: pointer to first occurence of c character
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strchr(char *s, char c)
 {
-	unsigned int j = 0;
+	unsigned int k;
 
-	while (j < n)
-	{
-		s[j] = b;
-		j++;
-	}
-	return (s);
+	for (k = 0; s[k] != '\0'; k++)
+		if (s[k] == c)
+			break;
+	return (s[k] == c ? (s + k) : '\0');
 }
