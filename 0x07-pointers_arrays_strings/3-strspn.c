@@ -2,21 +2,25 @@
 #include "main.h"
 
 /**
- * _memset - fills string with constant char b upto n bytes
- * @s: input pointer to string
- * @b: constant char
- * @n: number of bytes
- * Return: pointer to s string
+ * _strspn - gets the length of a prefix substring
+ * @s: input string to search for substring
+ * @accept: characters that prefix substring must include
+ * Return: length of prefix substring
+ *
  */
 
-char *_memset(char *s, char b, unsigned int n)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int j = 0;
+	unsigned int i, j, a_len = 0, len = 0;
 
-	while (j < n)
-	{
-		s[j] = b;
-		j++;
-	}
-	return (s);
+	while (accept[a_len] != '\0')
+		a_len++;
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; j < a_len; j++)
+			if (s[i] == accept[j])
+				len++, j = a_len;
+			else
+				if (j == a_len - 1)
+					goto exit;
+exit: return (len);
 }
