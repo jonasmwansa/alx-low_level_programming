@@ -2,21 +2,19 @@
 #include "main.h"
 
 /**
- * _memset - fills string with constant char b upto n bytes
- * @s: input pointer to string
- * @b: constant char
- * @n: number of bytes
- * Return: pointer to s string
+ * print_diagsums - prints sum of #'s in diagnols of square
+ * @a: input square array
+ * @size: size of one dimension in array
+ * Return: void
  */
 
-char *_memset(char *s, char b, unsigned int n)
+void print_diagsums(int *a, int size)
 {
-	unsigned int j = 0;
+	int i, j, sum1 = 0, sum2 = 0;
 
-	while (j < n)
+	for (j = 0, i = size - 1; j < (size * size); j += size + 1, i += size - 1)
 	{
-		s[j] = b;
-		j++;
+		sum1 += a[j], sum2 += a[i];
 	}
-	return (s);
+	printf("%d, %d\n", sum1, sum2);
 }
