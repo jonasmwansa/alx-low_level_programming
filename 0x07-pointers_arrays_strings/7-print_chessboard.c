@@ -2,21 +2,18 @@
 #include "main.h"
 
 /**
- * _memset - fills string with constant char b upto n bytes
- * @s: input pointer to string
- * @b: constant char
- * @n: number of bytes
- * Return: pointer to s string
+ * print_chessboard - a function that prints a chessboard
+ * @a: an array input to print
+ * Return: Nothing
  */
-
-char *_memset(char *s, char b, unsigned int n)
+void print_chessboard(char (*a)[8])
 {
-	unsigned int j = 0;
+	int i = 0, j;
 
-	while (j < n)
+	for (; i < 8; i++)
 	{
-		s[j] = b;
-		j++;
+		for (j = 0; j < 8; j++)
+			_putchar(a[i][j]);
+		_putchar('\n');
 	}
-	return (s);
 }
