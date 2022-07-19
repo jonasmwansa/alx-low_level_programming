@@ -1,22 +1,19 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * _memset - fills string with constant char b upto n bytes
- * @s: input pointer to string
- * @b: constant char
- * @n: number of bytes
- * Return: pointer to s string
- */
+* _strpbrk - finds first matching char in string
+* @s: input string to search for matching char
+* @accept: characters that could be matched
+* Return: pointer to matching char
+*/
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int j = 0;
+	unsigned int i, j;
 
-	while (j < n)
-	{
-		s[j] = b;
-		j++;
-	}
-	return (s);
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; accept[j] != '\0'; j++)
+			if (s[i] == accept[j])
+				goto exit;
+exit: return (s[i] != '\0' ? s + i : '\0');
 }
