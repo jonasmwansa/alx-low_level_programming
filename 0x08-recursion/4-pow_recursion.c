@@ -1,21 +1,18 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
-* _puts_recursion - print a string.
-* @s:pointer to char
-* Return:nothing.
-*/
+ * _pow_recursion - raises x to the power of y
+ * @x: Number Integer
+ * @y: Power
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 
-void _puts_recursion(char *s)
+int _pow_recursion(int x, int y)
 {
-	if (*s != '\0')
-	{
-		putchar(*s);
-		_puts_recursion(s + 1);
-	}
-	else
-	{
-		putchar('\n');
-	}
+	if (y < 0)
+		return (-1);
+	if (y == 0)
+		return (1);
+	return (x * _pow_recursion(x, y - 1));
 }
