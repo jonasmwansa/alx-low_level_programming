@@ -2,20 +2,17 @@
 #include "main.h"
 
 /**
-* _puts_recursion - print a string.
-* @s:pointer to char
-* Return:nothing.
+* _strlen_recursion - Returns Length of String
+* @s: string
+* Return: On success 1.
+* On error, -1 is returned, and errno is set appropriately.
 */
 
-void _puts_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	if (*s != '\0')
 	{
-		putchar(*s);
-		_puts_recursion(s + 1);
+		return (1 + _strlen_recursion(s + 1));
 	}
-	else
-	{
-		putchar('\n');
-	}
+	return (0);
 }
