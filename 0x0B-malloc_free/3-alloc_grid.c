@@ -3,27 +3,35 @@
 #include <stdio.h>
 
 /**
-* create_array - creates an array of chars,
-* and initializes it with a specific char
-* @size: input size
-* @c: input character
-*
-* Return: a pointer to the array, or NULL if it fails
-*/
+ * alloc_grid - pointer to a 2 dimensional array of integers
+ * @width: input width
+ * @height: input height
+ *
+ * Return: returns NULL on failure
+ */
 
-char *create_array(unsigned int size, char c)
+int **alloc_grid(int width, int height)
 {
-	unsigned int i = 0;
-	char *arr;
+	int **arr;
+	int i;
 
-	arr = (char *) malloc(size);
-	if (size == 0 || arr == NULL)
+	if (width == 0 || height == 0)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	arr = (int **) malloc(height * sizeof(int *));
+
+	if (arr == 0)
 	{
-		arr[i] = c;
+		return (NULL);
 	}
-	return (arr);
+	for (i = 0; i < height; i++)
+	{
+		arr[i] = malloc(width * sizeof(int));
+	}
+	if (arr != NULL)
+	{
+		return (arr);
+	}
+	return (NULL);
 }
