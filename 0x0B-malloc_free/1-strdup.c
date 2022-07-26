@@ -1,29 +1,27 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
 /**
-* create_array - creates an array of chars,
-* and initializes it with a specific char
-* @size: input size
-* @c: input character
+* _strdup - function that allocates space in memory
+* @str: input string
 *
-* Return: a pointer to the array, or NULL if it fails
+* Return: returns a pointer to a newly allocated space in memory
+*
 */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	unsigned int i = 0;
-	char *arr;
+	char *duplicate;
+	int i = 0, len = 0;
 
-	arr = (char *) malloc(size);
-	if (size == 0 || arr == NULL)
+	duplicate= malloc(sizeof(char) * (len + 1));
+	if (str == 0 || duplicate == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	for (i = 0; str[i]; i++)
 	{
-		arr[i] = c;
+		duplicate[i] = str[i];
+		len++;
 	}
-	return (arr);
+	duplicate[len] = '\0';
+	return (duplicate);
 }
