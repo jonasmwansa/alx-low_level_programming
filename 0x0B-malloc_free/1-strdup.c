@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
 * _strdup - function that allocates space in memory
 * @str: input string
