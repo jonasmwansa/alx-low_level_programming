@@ -1,20 +1,29 @@
-#include <stdio.h>
+#include<stdio.h>
+#include <stdlib.h>
 
 /**
-* main - prints the function.
-* @argc: is argument counter to an int.
-* @argv: is an agument value determiner for char.
-* Return: Returns always success.
-*/
+ * main - prints the function.
+ * @argc: counts agruments passed to the function for int.
+ * @argv: gives the value passed to the function for char.
+ * Return: Returns always success.
+ */
 
 int main(int argc, char *argv[])
 {
-	int i;
-	
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[i]);
-	}
+	int i, result = 1;
 
-return (0);
+	if (argc != 3)
+	{
+		printf("%s\n", "Error");
+		return (1);
+	}
+	else
+	{
+	for (i = 1; i < argc; i++)
+	{
+		result *= atoi(argv[i]);
+	}
+	printf("%d\n", result);
+	}
+	return (0);
 }
